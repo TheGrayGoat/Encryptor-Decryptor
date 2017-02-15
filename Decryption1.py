@@ -1,4 +1,10 @@
 from cryptography.fernet import Fernet
-cipher_suite = Fernet(#The key goes here)
-plain_text = cipher_suite.decrypt(#The cipher_text goes here)
+# from >filename of encryptor< import cipher_text, key
+from Encryption1 import cipher_text, key
+
+# key
+cipher_suite = Fernet(key)
+
+# decrypt message with key
+plain_text = cipher_suite.decrypt(cipher_text)
 print(plain_text)
